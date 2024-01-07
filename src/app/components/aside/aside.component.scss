@@ -1,0 +1,43 @@
+.aside-main {
+  width: 60px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  .aside-up,
+  .aside-down {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .logo,
+    .search,
+    .home,
+    .profile,
+    .document,
+    .user,
+    .alert,
+    .logout {
+      transition: 0.2s;
+      padding: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        background-color: #3f3fff;
+      }
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .search {
+      margin-bottom: 50px;
+    }
+  }
+}
