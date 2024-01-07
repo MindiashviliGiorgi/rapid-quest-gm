@@ -1,1 +1,47 @@
-<p>user-info works!</p>
+<div class="user-info-main">
+  <div class="avatar-name">
+    <div class="avatar">
+      <img src="{{userInfo.avatar}}">
+    </div>
+    <div class="name">
+      <h2>Hi {{userInfo.name}},</h2>
+      <p>Welcome Back.</p>
+    </div>
+  </div>
+  <div class="balance">
+    <div class="balance-title">
+      <p>Today</p>
+    </div>
+    <div class="acc-balance">
+      <h2>${{userInfo.accountBalance}}</h2>
+      <p>Account Balance</p>
+    </div>
+    <div class="contributions">
+      <h4>${{userInfo.contributions}}</h4>
+      <p>Year-to-Date Contributions</p>
+    </div>
+    <div class="total">
+      <h4>${{userInfo.total}}</h4>
+      <p>Total Interest</p>
+    </div>
+    <div class="btn">
+      <button>
+        <p>I want to</p>
+        <img src="/assets/icons/triangle-icon.png">
+      </button>
+    </div>
+  </div>
+  <div class="transactions">
+    <div class="transactions-title">
+      <p>Recent Transactions</p>
+    </div>
+    <div class="list">
+      <ul>
+        <li *ngFor="let transaction of userInfo.transitions">
+          <span>{{ transaction.date }}</span>
+          <p>{{ transaction.transferName }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
