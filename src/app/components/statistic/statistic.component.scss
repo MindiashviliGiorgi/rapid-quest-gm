@@ -1,6 +1,9 @@
 $employerColor : #000087;
 $employyColor : #2c2cf2;
 $totalColor : #6e6eff;
+$averageStat : 78;
+$topStat : 95;
+$meStat : 59;
 
 .statistic-main {
   width: 100%;
@@ -95,7 +98,7 @@ $totalColor : #6e6eff;
       display: flex;
       align-items: top;
       flex-direction: row;
-      column-gap: 30px;
+      column-gap: 20px;
       .peers-stats-left {
         display: flex;
         flex-direction: column;
@@ -105,10 +108,82 @@ $totalColor : #6e6eff;
           align-items: center;
           flex-direction: row;
           column-gap: 10px;
+          p {
+            font-size: 14px;
+          }
           select {
             border: none;
             outline: none;
-
+          }
+        }
+      }
+      .peers-stats-right {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 30px;
+        .container,
+        .container-top,
+        .container-me {
+          width: 150px;
+          padding: 10px 0;
+          color: #fff;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          row-gap: 10px;
+          flex-direction: column;
+          .container-progress {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: conic-gradient(
+              #2ffafa 0deg,
+              #2ffafa #{3.6 * $averageStat}deg,
+              #abffff 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              background-color: #f9f9f9;
+            }
+            .progress-value {
+              position: relative;
+              p {
+                color: #000;
+                font-size: 23px;
+              }
+            }
+          }
+          .text {
+            p {
+              color: #606060;
+              font-size: 14px;
+            }
+          }
+        }
+        .container-top {
+          .container-progress {
+            background: conic-gradient(
+              #2ffafa 0deg,
+              #2ffafa #{3.6 * $topStat}deg,
+              #abffff 0deg);
+          }
+        }
+        .container-me {
+          .container-progress {
+            background: conic-gradient(
+              #2ffafa 0deg,
+              #2ffafa #{3.6 * $meStat}deg,
+              #abffff 0deg);
           }
         }
       }

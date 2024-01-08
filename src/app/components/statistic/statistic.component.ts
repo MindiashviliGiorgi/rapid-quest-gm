@@ -9,6 +9,7 @@ Chart.register(CategoryScale, LinearScale, BarController, BarElement);
 })
 export class StatisticComponent {
   chart:any;
+  
 
   constructor() {}
 
