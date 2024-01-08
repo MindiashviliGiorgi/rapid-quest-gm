@@ -8,7 +8,7 @@ $totalColor : #6e6eff;
   padding: 40px 70px;
   display: flex;
   flex-direction: column;
-  row-gap: 60px;
+  row-gap: 25px;
   align-items: flex-start;
   .title {
     display: flex;
@@ -73,6 +73,43 @@ $totalColor : #6e6eff;
           width: 18px;
           height: 18px;
           border-radius: 50%;
+        }
+      }
+    }
+  }
+  .peers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .peers-title {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      p {
+        font-size: 14px;
+        color: #606060;
+      }
+    }
+    .peers-stats {
+      width: 100%;
+      display: flex;
+      align-items: top;
+      flex-direction: row;
+      column-gap: 30px;
+      .peers-stats-left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        .peers-inputs {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          column-gap: 10px;
+          select {
+            border: none;
+            outline: none;
+
+          }
         }
       }
     }
