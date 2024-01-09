@@ -1,6 +1,7 @@
 .user-info-main {
-  width: 350px;
-  height: 100vh;
+  width: 100%;
+  min-width: 250px;
+  height: auto;
   background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
@@ -45,15 +46,28 @@
         letter-spacing: 0.3px;
       }
     }
-    .acc-balance,
-    .contributions,
-    .total {
+    .acc-balance {
       display: flex;
       flex-direction: column;
       row-gap: 6px;
       p {
         color: #797979;
         font-size: 13px;
+      }
+    }
+    .contr-total {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      .contributions,
+      .total {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        p {
+          color: #797979;
+          font-size: 13px;
+        }
       }
     }
     .btn {
@@ -125,6 +139,100 @@
             font-weight: 700;
             font-size: 15px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 1420px) {
+  .user-info-main {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width : 1380px) {
+  .user-info-main {
+    min-width: 250px;
+    .avatar-name {
+      .avatar {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .name {
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+    .transactions {
+      .list {
+        ul {
+          li {
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width : 1230px) {
+  .user-info-main {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: top;
+    display: flex;
+    padding: 40px 50px;
+    .transactions {
+      width: 100%;
+      .list {
+        ul {
+          li {
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 760px) {
+  .user-info-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: top;
+    width: 100%;
+    .balance {
+      .contr-total {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width : 500px) {
+  .user-info-main {
+    padding: 40px 20px;
+    .avatar-name {
+      .avatar {
+        img {
+          width: 70px;
+          height: 70px;
         }
       }
     }

@@ -6,4 +6,32 @@
   flex-direction: row;
   gap: 0px;
   padding-left: 60px;
+  .sections {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    flex-direction: row;
+    column-gap: 0px;
+  }
+}
+
+@media (max-width : 1330px) {
+  .home-main {
+    padding: 0px;
+    .sections {
+      justify-content: center;
+      align-items: top;
+      display: flex;
+    }
+  }
+}
+
+@media (max-width : 1230px) {
+  .home-main {
+    .sections {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
 }

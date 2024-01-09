@@ -93,3 +93,39 @@
     }
   }
 }
+
+@media (max-width : 1270px) {
+  .strategy-main {
+    padding: 60px 10px;
+  }
+}
+
+@media (max-width : 1230px) {
+  .strategy-main {
+    padding: 60px 50px;
+  }
+}
+
+@media (max-width : 500px) { 
+  .strategy-main {
+    padding: 60px 0px;
+    .title,
+    .contribution-age,
+    .list {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .bottom-alert {
+      display: none;
+    }
+    .btn {
+      width: 100%;
+      p {
+        display: none;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

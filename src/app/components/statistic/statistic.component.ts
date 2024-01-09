@@ -37,8 +37,9 @@ export class StatisticComponent {
               }
               return this.getGradient(chart);
           },
+
             borderWidth: 1,
-            categoryPercentage: 0.2,
+            categoryPercentage: 0.3,
           },
         ],
       },

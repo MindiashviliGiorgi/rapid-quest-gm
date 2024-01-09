@@ -7,7 +7,7 @@ $meStat : 59;
 
 .statistic-main {
   width: 100%;
-  min-height: 100vh;
+  height: auto;
   padding: 40px 70px 0px 70px;
   display: flex;
   flex-direction: column;
@@ -35,6 +35,25 @@ $meStat : 59;
       flex-direction: row;
       column-gap: 50px;
       align-items: center;
+      .stat-boxes {
+        display: flex;
+        flex-direction: row;
+        column-gap: 50px;
+        .stat-box {
+          display: flex;
+          width: 190px;
+          flex-direction: column;
+          row-gap: 5px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #2929ff;
+          p {
+            font-size: 13px;
+          }
+          h3 {
+            font-size: 24px;
+          }
+        }
+      }
       .stat-box {
         display: flex;
         width: 190px;
@@ -184,6 +203,126 @@ $meStat : 59;
               #2ffafa 0deg,
               #2ffafa #{3.6 * $meStat}deg,
               #abffff 0deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 1440px) {
+  .statistic-main {
+    padding: 40px 30px 0px 30px;
+  }
+}
+
+@media (max-width : 1160px) {
+  .statistic-main {
+    #myChart {
+      width: 400px;
+    }
+  }
+}
+
+@media(max-width : 760px) {
+  .statistic-main {
+    .title {
+      .title-down {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+    }
+    .contributions {
+      .statistic-colors {
+        column-gap: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .color-info {
+          flex-direction: column;
+          row-gap: 8px;
+          align-items: flex-start;
+          .circle {
+            width: 10px;
+            height: 10px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .peers {
+      width: 100%;
+      .peers-stats {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        .peers-stats-left {
+          .peers-inputs {
+            width: 100%;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ccc;
+            p {
+              width: 50px;
+            }
+          }
+        }
+        .peers-stats-right {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          column-gap: 30px;
+          .container,
+          .container-top,
+          .container-me {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 500px) {
+  .statistic-main {
+    .title {
+      width: 100%;
+      .title-down {
+        width: 100%;
+        .stat-boxes {
+          width: 100%;
+          column-gap: 10px;
+          justify-content: space-between;
+          .stat-box {
+            width: 100%;
+            flex: 1;
+          }
+        }
+        .stat-box {
+          width: 100%;
+        }
+      }
+    }
+    .peers {
+      .peers-stats {
+        .peers-stats-right {
+          .container,
+          .container-top,
+          .container-me {
+            width: 100px;
+            .container-progress {
+              width: 80px;
+              height: 80px;
+              &::before {
+                width: 60px;
+                height: 60px;
+              }
+            }
           }
         }
       }
