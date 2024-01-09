@@ -1,0 +1,95 @@
+.strategy-main {
+  width: 100%;
+  height: auto;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  background-color: #f1f1f1;
+  .title {
+    h2 {
+      font-size: 20px
+    }
+  }
+  .contribution-age {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cacaca;
+    .contr-name {
+      p {
+        font-size: 14px;
+      }
+    }
+    .progress-main {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 8px;
+    }
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 0px;
+    .list-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    button {
+      color: #fff;
+      background-color: #3030ff;
+      padding: 8px 40px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 17px;
+      letter-spacing: 0.4px;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: #6464ff;
+      }
+    }
+    p {
+      font-size: 14px;
+      color: #3030ff;
+    }
+  }
+  .bottom-alert {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    p {
+      b {
+        font-size: 17px;
+      }
+      span {
+        font-size: 12px;
+        color: #696969;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #3030ff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
